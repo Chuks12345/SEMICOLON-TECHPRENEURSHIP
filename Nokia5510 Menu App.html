@@ -1,0 +1,136 @@
+#NOKIA 5510 MENU APP
+
+
+#1. Phone book - 
+#2. Messages
+#3. Chat
+#4. Call register
+#5. Tones
+#6. Settings
+#7. Call divert
+#8. Music
+#9. Games
+#10. Calculator
+#11. Reminders
+#12. Clock
+#13. Profiles
+#14. Services
+#15. SIM Services 
+
+
+
+def add_name():                     #Save new contact name and number here
+    key = "1"
+    while key !="0":
+        new_name = input("Enter new contact name: ").capitalize()
+        contact_namelist.append(new_name)
+        
+        new_name_number = input("Enter new contact number: ")
+        contact_numberlist.append(new_name_number)
+        print("\n")
+        
+        key = input("Press 0 to quit. Press any other key to continue: ")
+        
+    return contact_namelist, contact_numberlist
+ 
+
+
+def search_name():                  #Search saved contacts here
+    search_name = input("Enter the name to search: ").capitalize()
+    if search_name in contact_namelist:
+        search_count = contact_namelist.index(search_name)
+        
+        search_number = contact_numberlist[search_count]
+        
+        #print(count)
+        return search_name, search_number
+    else:
+        return f"{search_name} NOT FOUND!"
+       
+    #print(contact_namelist)
+    #print(contact_numberlist)
+
+def get():
+    pass
+    
+ 
+def erase():
+    pass
+
+
+def edit():
+    pass
+
+
+
+
+def phone_book():
+    
+    
+    
+    key = "1"
+    
+    while key !="0":
+        print("PHONE BOOK MENU")
+        print("_________________")
+        print("Option 1: search")
+        print("Option 2: service numbers")
+        print("Option 3: add name")
+        print("Option 4: Erase")
+        print("Option 5: Edit")
+        print("Option 0: Exit")
+        print("_________________")
+        print("\n")
+        key = input("Select your option: ")
+        if key == "1":
+            print(search_name())
+            print("\n")
+            key= input("Press 0 to exit phonebook menu. Press any key to continue: ")
+            if key !="0":
+                continue
+            else:
+                pass
+            
+        elif key == "2":
+            pass
+        elif key =="3":
+            add_name()
+    
+    
+    erase()
+    edit()
+    
+    
+    
+    
+contact_namelist = ["Emergency", "Bola", "Ade", "Emeka"] 
+contact_numberlist = ["111", "0909", "0808", "0707"]
+key = "1"
+
+
+print("**********__________WELCOME TO NOKIA 5510 MAIN MENU_________**********")
+print("\n")
+
+key = input("Press 0 to quit. Press any other key to continue: ")
+if key != "0":
+    phone_book()
+
+else:
+    print("GOOD BYE!")
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+    
+
+
